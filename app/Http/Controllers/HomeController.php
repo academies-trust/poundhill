@@ -34,17 +34,10 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		$events = collect(json_decode($this->getRemoteEvents()));
-		$events->each(function($event) {
-			$event->published_on = Carbon::createFromTimeStamp($event->start, 'GMT+1');
-			$event->expires_on = Carbon::createFromTimeStamp($event->end, 'GMT+1');
-			$event->featured = null;
-			$event->remote = true;
-		});
 		$twitter = $this->getTweets();
 		$slides = $this->getSlides();
-
-		$events = $events->sortBy('published_on');
+		$events = new Update();
+		$events = $events->events();
 		$news = new Update();
 		$now = new Carbon();
 		return view('home', compact('slides', 'events', 'twitter', 'news', 'now'));
@@ -214,7 +207,7 @@ class HomeController extends Controller {
 
 	public function getTweets()
 	{
-		$twitter = json_decode(Twitter::getUserTimeline(['screen_name' => 'HPS43', 'count' => 4, 'format' => 'json']));
+		$twitter = json_decode(Twitter::getUserTimeline(['screen_name' => 'Pound_Hill', 'count' => 4, 'format' => 'json']));
 		foreach($twitter as $tweet) {
 			$tweet->ago = new Carbon($tweet->created_at);
 		}
@@ -230,30 +223,6 @@ class HomeController extends Controller {
 		});
 
 		return redirect('contact');
-	}
-
-	public function getRemoteEvents()
-	{
-		$now = Carbon::now();
-		if($now->month < 9) {
-			$startYear = ($now->year - 1);
-			$endYear = ($now->year);
-		} else {
-			$startYear = ($now->year);
-			$endYear = ($now->year + 1);
-		}
-		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, 'http://holmbush.eschools.co.uk/cms/cms_pages/get_calendar_source/x/x/0');
-		curl_setopt($ch, CURLOPT_USERAGENT,'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/32.0.1700.107 Chrome/32.0.1700.107 Safari/537.36');
-		curl_setopt($ch, CURLOPT_POST, true);
-		curl_setopt($ch, CURLOPT_POSTFIELDS, "start=".strtotime($startYear.'-09-01')."&end=".strtotime($endYear.'-07-31'));
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-		$ret = curl_exec($ch);
-		if (curl_error($ch)) {
-		    echo curl_error("Error on line 62: ".$ch);
-		}
-		return $ret;
 	}
 
 }

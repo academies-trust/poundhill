@@ -14,6 +14,9 @@
 					<h1>Event - Create</h1>
 				</header>
 				{!!Form::open(['url' => 'about/news', 'files'=>true])!!}
+					@foreach($errors->all() as $error)
+						<div class="alert alert-danger" role="alert">{{$error}}</div>
+					@endforeach
 					<div class="form-group">
 						<label for="title">Title</label>
 						<input type="text" id="title" name="title" class="form-control" placeholder="Really exciting event" required >
@@ -43,7 +46,7 @@
 
 					<input type="hidden" name="category" value="3">
 
-					<input type="submit" class="btn btn-lg btn-primary pull-right" value="Next step >>" >
+					<input type="submit" class="btn btn-lg btn-primary pull-right" value="Add" >
 					<a href="{{url('about/news')}}">cancel</a>
 				{!! Form::close() !!}
 			</div>

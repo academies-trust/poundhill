@@ -2973,7 +2973,7 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .btn-green {
-  background-color:#72aa46;
+  background-color:#882e49;
   color:#fff;
 }
 
@@ -6354,6 +6354,9 @@ label,
 .checkbox label {
   font-weight: 300;
 }
+body {
+  background: #fafafa;
+}
 #nav-mega {
   display: none;
   position: absolute;
@@ -6430,7 +6433,7 @@ img {
   padding-top: 1em;
   padding-bottom: 1em;
   line-height: 100px;
-  border-bottom: 5px solid #72AA46;
+  border-bottom: 5px solid #882e49;
 }
 #heroNav {
   position: relative;
@@ -6470,7 +6473,7 @@ img {
   white-space: nowrap;
 }
 .nav .mega-link:first-child {
-  border-top: 3px solid #72AA46;
+  border-top: 3px solid #882e49;
 }
 .nav .mega-link:first-child + li {
   border-top: 3px solid #e74c3c;
@@ -6493,7 +6496,7 @@ img {
 }
 .nav li.active,
 .nav li.current {
-  box-shadow: 0 3px #72AA46;
+  box-shadow: 0 3px #882e49;
   font-weight: bold;
 }
 .nav li.active:after {
@@ -6553,7 +6556,7 @@ img {
   max-height: calc(100% - 3em);
   bottom: 5em;
   margin-left: -1em;
-  background: #72AA46;
+  background: #882e49;
   color: #fff;
   padding: 1em 2em 2em;
   overflow-y: auto;
@@ -6596,13 +6599,13 @@ header > h1 {
   line-height: 2em;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  color: #72AA46;
+  color: #882e49;
 }
 header {
   margin-bottom: 2em;
 }
 h3 {
-  color: #72AA46;
+  color: #882e49;
   font-weight: bold;
   line-height: 1.5em;
 }
@@ -6645,7 +6648,7 @@ h4 {
   margin-top: 0;
   padding: 0.5em 1em;
   color: #fff;
-  background: #72AA46;
+  background: #829332;
   line-height: 1.5em;
 }
 .news-post h4 a:link,
@@ -6754,7 +6757,7 @@ h4 {
   color: #999;
 }
 #footer {
-  background: #72AA46;
+  background: #882e49;
   color: #fff;
   padding: 2em;
   font-size: 0.8em;
@@ -6781,7 +6784,7 @@ h4 {
   background: #eee;
 }
 .blue-container {
-  background: #72AA46;
+  background: #882e49;
   color: #fff;
   padding: 0.5em 0;
 }
@@ -6825,7 +6828,7 @@ h4 {
 }
 
 .text-green {
-  color:#72aa46;
+  color:#882e49;
 }
 
 .text-white {
@@ -6841,7 +6844,7 @@ h4 {
 }
 
 .bg-green {
-  background-color:#72aa46;
+  background-color:#882e49;
 }
 
 .margin-bottom {
@@ -6869,7 +6872,7 @@ h4 {
 }
 
 .aims-box {
-  background: #72aa46;
+  background: #882e49;
   color:#fff;
   margin: 1rem;
   padding: 1rem;
@@ -6967,6 +6970,29 @@ h4 {
 }
 body > .container {
   padding-bottom: 2em;
+}
+#stream {
+  background: blue;
+  background: url('http://www.netanimations.net/water_waves_ocean_ripple_high_quality_animated_gif.gif');
+  min-height: 70px;
+  line-height: 70px;
+  font-size: 2em;
+  text-align: center;
+  color: #fff;
+}
+#main {
+  background: url('http://images.clipartpanda.com/tree-clipart-tree_tiny_green_shaded.png') no-repeat;
+  background-size: 600px;
+  background-position: bottom right;
+}
+#main .container,
+#main .container-fluid {
+  background: #fff;
+  padding-bottom: 1em;
+}
+input.form-control.picker__input {
+  background: #fff;
+  cursor: pointer;
 }
 @media (max-width: 991px) {
   #nav-mega {

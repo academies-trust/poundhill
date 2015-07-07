@@ -28,14 +28,20 @@
 		<div class="col-md-12">
 			<article>
 				<header>
-					<h1>Welcome to Holmbush Primary Academy</h1>
+					<h1>Welcome to Pound Hill Infant Academy</h1>
 				</header>
-				<p><strong>Holmbush Primary Academy provides a safe, attractive and stimulating learning environment for over 200 pupils ages 4 to 11. The classrooms are extremely well resourced; light, bright and airy. We have excellent IT provision with a number of networked computers in every room and access to a wide variety of portable computers, iPads, Learn pads, cameras, microphones, webcams and other equipment that enriches our curriculum.</strong>
-				<p>We have a fantastic library offering a huge selection of books which the children can borrow to read at home. We have a dedicated modern kitchen area where children can learn how to prepare food. We have a large multipurpose hall which we use for dance, games and gymnastics. We have an attractive outside space with a variety of equipment, for the children to improve their physical development, around our playground. We also have an outside classroom, a small woodland and an Iron Age Roundhouse. Every classroom opens up directly onto the outside areas and we frequently make use of these resources in our lessons.</p>
-				<footer>
-					<h3>Mrs Rebecca Jackson</h3>
-					<h4>Principal of Holmbush Primary Academy</h4>
-				</footer>
+				<div class="row">
+					<div class="col-md-3">
+						<img src="http://www.clker.com/cliparts/z/m/8/5/X/9/little-orange-bird-md.png">
+					</div>
+					<div class="col-md-9">
+						<p><strong>We are a large infant school with 270 pupils, located in Crawley, West Sussex.  We aim to treat every child as an individual and provide a happy, welcoming, thriving environment.  We offer exciting learning experiences which have creativity at the heart, balancing the teaching of knowledge and skills, and encouraging innovation.  All our children are expected to be responsible members of their community, understanding and respecting everyone’s rights, different values and traditions, and playing an active role in the development of our school.   Our overall vision is that all members of our community are successful learners, responsible citizens, effective contributors and happy, confident individuals.</p>
+						<footer>
+							<h3>Miss Julie Knock-Bravery</h3>
+							<h4>Headteacher</h4>
+						</footer>
+					</div>
+				</div>
 			</article>
 			<section class="news-container">
 				<header>
@@ -56,6 +62,8 @@
 							
 						</section>
 					</div>
+					
+
 					<div class="col-md-8">
 						<div class="row">
 							<?php $counter = 0; ?>
@@ -106,14 +114,16 @@
 								?>
 							@endforeach
 						</div>
+						<a href="#"><button class="btn btn-primary pull-right btn-lg">View More News...</button></a>
 					</div>
-					<a href="{{url()}}/about/news"><button class="btn btn-primary pull-right btn-lg">View More News...</button></a>
+					<!--<a href="{{url()}}/about/news"><button class="btn btn-primary pull-right btn-lg">View More News...</button></a>-->
 				</div>
 				<div class="clear">
 			</section>
 		</div>
 	</div>
 </div>
+<!--
 <div class="container-fluid spacer accred">
 	<div class="col-md-1 col-sm-1 col-xs-2 col-sm-offset-2 col-xs-offset-0 col-md-offset-2 text-center">
 		<img src="{{url()}}/img/Logos/adur logo.png?w=80&h=80&fit=contain">
@@ -140,27 +150,26 @@
 		<img src="{{url()}}/img/Logos/proud.jpg?w=80&h=80&fit=contain">
 	</div>
 </div>
-<div class="container-fluid spacer">
+-->
+<div class="container spacer">
 	<div class="row">
-		<div class="container">
-			<div class="row">
-				<header>
-					<h1>Our Social Feed</h1>
-				</header>
-				@if(count($twitter))
-					@foreach($twitter as $tweet)
-						<div class="col-md-3 col-sm-3 col-xs-6 news-block twitter-box">
-							<section>
-								<img src="{{url()}}/img/elements/twitterbird.png?w=30" class="pull-left twitter-bird">
-								<p><a href="https://twitter.com/HPS43/status/{{$tweet->id_str}}" target="_blank">{{$tweet->text}}</a></p>
-								<p class="small text-blue">{{$tweet->ago->diffForHumans()}}</p>
-							</section>
-						</div>
-					@endforeach
-				@else
-					No current tweets
-				@endif
-			</div>
+		<div class="col-md-12">
+			<header>
+				<h1>Our Social Feed</h1>
+			</header>
+			@if(count($twitter))
+				@foreach($twitter as $tweet)
+					<div class="col-md-3 col-sm-3 col-xs-6 news-block twitter-box">
+						<section>
+							<img src="{{url()}}/img/elements/twitterbird.png?w=30" class="pull-left twitter-bird">
+							<p><a href="https://twitter.com/uniofbrighton/status/{{$tweet->id_str}}" target="_blank">{{$tweet->text}}</a></p>
+							<p class="small text-blue">{{$tweet->ago->diffForHumans()}}</p>
+						</section>
+					</div>
+				@endforeach
+			@else
+				No current tweets
+			@endif
 		</div>
 	</div>
 </div>

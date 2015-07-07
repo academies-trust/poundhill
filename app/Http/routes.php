@@ -12,14 +12,10 @@
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('home', function() {
-	dd(env('DB_DATABASE'));
-	return redirect('/');
+Route::get('f', function() {
+	return bcrypt('Gruffa10');
 });
 
-Route::get('questionnaire', function() {
-	return redirect('https://docs.google.com/forms/d/1vzoX5iFECidjX4Eg0lmBoJAwQeJLZwo6cfYrg1sA_sU/viewform');
-});
 //Route::get('preview', 'HomeController@index');
 Route::get('eventdd', 'EventController@getRemoteEventsdd');
 

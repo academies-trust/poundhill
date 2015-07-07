@@ -31,9 +31,9 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 */
 	protected $hidden = ['password', 'remember_token'];
 
-	public function can($permission, \App\Category $category)
+	public function can($permission, $category)
 	{	
-		$check = $this->belongsToMany('\App\Category', 'category_user')->where('category_user.'.$permission,'=',1)->where('category_id', '=', $category->id)->count();
+		$check = $this->belongsToMany('\App\Category', 'category_user')->where('category_user.'.$permission,'=',1)->where('category_id', '=', $category)->count();
 		if($check) {
 			return true;
 		}

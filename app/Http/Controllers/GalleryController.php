@@ -43,38 +43,54 @@ class GalleryController extends UpdateController {
 	 */
 	public function store(Request $request)
 	{
-		$post = new Update();
-		$post->title = $request->title;
-		$post->content = $request->body;
-		$post->published_on = $request->published;
-		$post->headline = $request->headline;
-		if($request->expires) {
-			$post->expires_on = $request->expires;
-		}
-		$post->category_id = $request->category;
-		if($post->save())
-		{
-			$files = $request->file('attachments');
-			if(count($files) && !is_null($files) && is_array($files) && !is_null($files[0]))
-			{
-				mkdir($this->upload_dir.$post->id);
-				foreach($files as $file) {
-				  if($file->isValid()) {
-				  	if($file->move($this->upload_dir.$post->id, $file->getClientOriginalName()))
-				  	{
-				  		$attachment = new Attachment();
-				  		$attachment->filename = $file->getClientOriginalName();
-				  		$attachment->size = $file->getClientSize();
-				  		$attachment->update_id = $post->id;
-				  		$attachment->type = pathinfo($this->upload_dir.$post->id.'/'.$file->getClientOriginalName(), PATHINFO_EXTENSION);
-				  		$attachment->save();
-				  	}
-				  }
-				}
+		$validator = Validator::make($request->all(), [
+			'title' => 'required | min:3',
+			'headline' => 'sometimes|min:3',
+			'body' => 'sometimes | min:3',
+			'attachments' => 'required',
+			'published' => 'required|date',
+			'expires' => 'sometimes|after:'.$request->published
+		]);
+		if($validator->passes()) {
+			$post = new Update();
+			$post->title = $request->title;
+			$post->content = $request->body;
+			$post->published_on = $request->published;
+			$post->headline = $request->headline;
+			if($request->expires) {
+				$post->expires_on = $request->expires;
 			}
-			return redirect('about/galleries');
+			$post->category_id = $request->category;
+			if($post->save())
+			{
+				$files = $request->file('attachments');
+				if(count($files) && !is_null($files) && is_array($files) && !is_null($files[0]))
+				{
+					mkdir($this->upload_dir.$post->id);
+					foreach($files as $file) {
+					  if($file->isValid()) {
+					  	if($file->move($this->upload_dir.$post->id, $file->getClientOriginalName()))
+					  	{
+					  		$attachment = new Attachment();
+					  		$attachment->filename = $file->getClientOriginalName();
+					  		$attachment->size = $file->getClientSize();
+					  		$attachment->update_id = $post->id;
+					  		$attachment->type = pathinfo($this->upload_dir.$post->id.'/'.$file->getClientOriginalName(), PATHINFO_EXTENSION);
+					  		$attachment->save();
+					  	}
+					  }
+					}
+				}
+				if($post->attachments()->count() > 0 && $post->featured == '') {
+					$post->featured = $post->attachments()->first()->id;
+					$post->save();
+				}
+				return redirect('about/galleries');
+			} else {
+				return 'Error';
+			}
 		} else {
-			return 'Error';
+			return redirect('about/galleries/create')->withInput();
 		}
 	}
 
@@ -111,67 +127,79 @@ class GalleryController extends UpdateController {
 
 	public function update($id, Request $request)
 	{
-		$post = Update::withTrashed()->find($id);
-		$post->title = $request->title;
-		$post->content = $request->body;
-		$post->published_on = $request->published;
-		$post->headline = $request->headline;
-		if(isset($request->expires)) {
-			$post->expires_on = $request->expires;
-		}
-		$post->category_id = $request->category;
-		if($post->save())
-		{
-			if($request->delete)
-			{
-				foreach($request->delete as $deletion) {
-					$attachment = Attachment::find($deletion);
-					$attachment->delete();
-				}
+		$validator = Validator::make($request->all(), [
+			'title' => 'required | min:3',
+			'headline' => 'sometimes|min:3',
+			'body' => 'sometimes | min:3',
+			'attachments' => 'required',
+			'published' => 'required|date',
+			'expires' => 'sometimes|after:'.$request->published
+		]);
+		if($validator->passes()) {
+			$post = Update::withTrashed()->find($id);
+			$post->title = $request->title;
+			$post->content = $request->body;
+			$post->published_on = $request->published;
+			$post->headline = $request->headline;
+			if(isset($request->expires)) {
+				$post->expires_on = $request->expires;
 			}
-			$request->featured = ($request->featured == '') ? null : $request->featured;
-			$post->featured = $request->featured;
-			$post->save();
-			if($request->destroy)
+			$post->category_id = $request->category;
+			if($post->save())
 			{
-				$post->delete();
-			} else {
-				if(!is_null($post->deleted_at))
+				if($request->delete)
 				{
-					$post->restore();
+					foreach($request->delete as $deletion) {
+						$attachment = Attachment::find($deletion);
+						$attachment->delete();
+					}
 				}
+				$request->featured = ($request->featured == '') ? null : $request->featured;
+				$post->featured = $request->featured;
+				$post->save();
+				if($request->destroy)
+				{
+					$post->delete();
+				} else {
+					if(!is_null($post->deleted_at))
+					{
+						$post->restore();
+					}
+				}
+				
+				$files = $request->file('attachments');
+				if(count($files))
+				{
+					if(!is_dir($this->upload_dir.$post->id))
+					 {
+					 	mkdir($this->upload_dir.$post->id);
+					 }
+					$success = true;
+					foreach($files as $file) {
+					  if(!is_null($file) && $file->isValid()) {
+					  	if($file->move($this->upload_dir.$post->id, $file->getClientOriginalName()))
+					  	{
+					  		$attachment = new Attachment();
+					  		$attachment->filename = $file->getClientOriginalName();
+					  		$attachment->size = $file->getClientSize();
+					  		$attachment->update_id = $post->id;
+					  		$attachment->type = pathinfo($this->upload_dir.$post->id.'/'.$file->getClientOriginalName(), PATHINFO_EXTENSION);
+					  		$attachment->save();
+					  	} else {
+					  		$success = false;
+					  	}
+					  }
+					}
+					if($success) {
+						return redirect('about/galleries/'.$post->id.'/edit');
+					}
+				}
+				return redirect('about/galleries');
+			} else {
+				return 'Error';
 			}
-			
-			$files = $request->file('attachments');
-			if(count($files))
-			{
-				if(!is_dir($this->upload_dir.$post->id))
-				 {
-				 	mkdir($this->upload_dir.$post->id);
-				 }
-				$success = true;
-				foreach($files as $file) {
-				  if(!is_null($file) && $file->isValid()) {
-				  	if($file->move($this->upload_dir.$post->id, $file->getClientOriginalName()))
-				  	{
-				  		$attachment = new Attachment();
-				  		$attachment->filename = $file->getClientOriginalName();
-				  		$attachment->size = $file->getClientSize();
-				  		$attachment->update_id = $post->id;
-				  		$attachment->type = pathinfo($this->upload_dir.$post->id.'/'.$file->getClientOriginalName(), PATHINFO_EXTENSION);
-				  		$attachment->save();
-				  	} else {
-				  		$success = false;
-				  	}
-				  }
-				}
-				if($success) {
-					return redirect('about/galleries/'.$post->id.'/edit');
-				}
-			}
-			return redirect('about/galleries');
 		} else {
-			return 'Error';
+			return redirect('about/galleries/'.$post->id.'/edit')->withInput();
 		}
 	}
 

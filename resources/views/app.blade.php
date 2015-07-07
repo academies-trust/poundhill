@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Holmbush Primary Academy</title>
+	<title>Pound Hill Infant Academy</title>
 
 	<link href="{{url()}}/css/app.css" rel="stylesheet">
 
@@ -24,9 +24,9 @@
 		@yield('hero')
 	</div>
 	
-
-	@yield('content')
-
+	<main id="main">
+		@yield('content')
+	</main>
 	@include('partials.footer')
 
 	@include('partials.scripts')

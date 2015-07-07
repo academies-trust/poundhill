@@ -12,7 +12,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5 col-sm-5 col-xs-12">
-					<a href="{{url()}}"><img src="{{url()}}/img/elements/logo-holmbush.png?h=110"></a>
+					<a href="{{url()}}"><img src="{{url()}}/img/elements/logo-poundhill.png?h=110"></a>
 				</div>
 				<div class="col-md-3 col-sm-3 col-sm-offset-4 col-xs-12 col-xs-offset-0 col-md-offset-4 text-right">
 					<a href="http://www.brighton.ac.uk/academiestrust"><img src="{{url()}}/img/elements/logo-ubat-black.png?h=80"></a>

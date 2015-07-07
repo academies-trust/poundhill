@@ -34,14 +34,7 @@ class UpdateController extends Controller {
 		$category = Category::find(1);
 		$updates = new Update();
 		$now = Carbon::now();
-		$events = collect(json_decode($this->getRemoteEvents()));
-		$events->each(function($event) {
-			$event->published_on = Carbon::createFromTimeStamp($event->start, 'GMT+1');
-			$event->expires_on = Carbon::createFromTimeStamp($event->end, 'GMT+1');
-			$event->featured = null;
-			$event->remote = true;
-		});
-		return view('about.news.index', compact('updates','category', 'now', 'twitter', 'events'));
+		return view('about.news.index', compact('updates','category', 'now', 'twitter'));
 	}
 
 	/**
@@ -61,38 +54,53 @@ class UpdateController extends Controller {
 	 */
 	public function store(Request $request)
 	{
-		$post = new Update();
-		$post->title = $request->title;
-		$post->content = $request->body;
-		$post->published_on = $request->published;
-		$post->headline = $request->headline;
-		if($request->expires) {
-			$post->expires_on = $request->expires;
-		}
-		$post->category_id = $request->category;
-		if($post->save())
-		{
-			$files = $request->file('attachments');
-			if(count($files) && !is_null($files) && is_array($files) && !is_null($files[0]))
-			{
-				mkdir($this->upload_dir.$post->id);
-				foreach($files as $file) {
-				  if($file->isValid()) {
-				  	if($file->move($this->upload_dir.$post->id, $file->getClientOriginalName()))
-				  	{
-				  		$attachment = new Attachment();
-				  		$attachment->filename = $file->getClientOriginalName();
-				  		$attachment->size = $file->getClientSize();
-				  		$attachment->update_id = $post->id;
-				  		$attachment->type = pathinfo($this->upload_dir.$post->id.'/'.$file->getClientOriginalName(), PATHINFO_EXTENSION);
-				  		$attachment->save();
-				  	}
-				  }
-				}
+		$validator = Validator::make($request->all(), [
+			'title' => 'required | min:3',
+			'headline' => 'sometimes|min:3',
+			'body' => 'required | min:3',
+			'published' => 'required|date',
+			'expires' => 'sometimes|after:'.$request->published
+		]);
+		if($validator->passes()) {
+			$post = new Update();
+			$post->title = $request->title;
+			$post->content = $request->body;
+			$post->published_on = $request->published;
+			$post->headline = $request->headline;
+			if($request->expires) {
+				$post->expires_on = $request->expires;
 			}
-			return redirect('about/news');
+			$post->category_id = $request->category;
+			if($post->save())
+			{
+				$files = $request->file('attachments');
+				if(count($files) && !is_null($files) && is_array($files) && !is_null($files[0]))
+				{
+					mkdir($this->upload_dir.$post->id);
+					foreach($files as $file) {
+					  if($file->isValid()) {
+					  	if($file->move($this->upload_dir.$post->id, $file->getClientOriginalName()))
+					  	{
+					  		$attachment = new Attachment();
+					  		$attachment->filename = $file->getClientOriginalName();
+					  		$attachment->size = $file->getClientSize();
+					  		$attachment->update_id = $post->id;
+					  		$attachment->type = pathinfo($this->upload_dir.$post->id.'/'.$file->getClientOriginalName(), PATHINFO_EXTENSION);
+					  		$attachment->save();
+					  	}
+					  }
+					}
+				}
+				if($post->attachments()->count() > 0 && $post->featured == '') {
+					$post->featured = $post->attachments()->first()->id;
+					$post->save();
+				}
+				return redirect('about/news');
+			} else {
+				return 'Error';
+			}
 		} else {
-			return 'Error';
+			return redirect('about/news/create')->withInput();
 		}
 	}
 
@@ -136,67 +144,78 @@ class UpdateController extends Controller {
 	 */
 	public function update($id, Request $request)
 	{
-		$post = Update::withTrashed()->find($id);
-		$post->title = $request->title;
-		$post->content = $request->body;
-		$post->published_on = $request->published;
-		$post->headline = $request->headline;
-		if(isset($request->expires)) {
-			$post->expires_on = $request->expires;
-		}
-		$post->category_id = $request->category;
-		if($post->save())
-		{
-			if($request->delete)
-			{
-				foreach($request->delete as $deletion) {
-					$attachment = Attachment::find($deletion);
-					$attachment->delete();
-				}
+		$validator = Validator::make($request->all(), [
+			'title' => 'required | min:3',
+			'headline' => 'sometimes|min:3',
+			'body' => 'required | min:3',
+			'published' => 'required|date',
+			'expires' => 'sometimes|after:'.$request->published
+		]);
+		if($validator->passes()) {
+			$post = Update::withTrashed()->find($id);
+			$post->title = $request->title;
+			$post->content = $request->body;
+			$post->published_on = $request->published;
+			$post->headline = $request->headline;
+			if(isset($request->expires)) {
+				$post->expires_on = $request->expires;
 			}
-			$request->featured = ($request->featured == '') ? null : $request->featured;
-			$post->featured = $request->featured;
-			$post->save();
-			if($request->destroy)
+			$post->category_id = $request->category;
+			if($post->save())
 			{
-				$post->delete();
-			} else {
-				if(!is_null($post->deleted_at))
+				if($request->delete)
 				{
-					$post->restore();
+					foreach($request->delete as $deletion) {
+						$attachment = Attachment::find($deletion);
+						$attachment->delete();
+					}
 				}
+				$request->featured = ($request->featured == '') ? null : $request->featured;
+				$post->featured = $request->featured;
+				$post->save();
+				if($request->destroy)
+				{
+					$post->delete();
+				} else {
+					if(!is_null($post->deleted_at))
+					{
+						$post->restore();
+					}
+				}
+				
+				$files = $request->file('attachments');
+				if(count($files))
+				{
+					if(!is_dir($this->upload_dir.$post->id))
+					 {
+					 	mkdir($this->upload_dir.$post->id);
+					 }
+					$success = true;
+					foreach($files as $file) {
+					  if(!is_null($file) && $file->isValid()) {
+					  	if($file->move($this->upload_dir.$post->id, $file->getClientOriginalName()))
+					  	{
+					  		$attachment = new Attachment();
+					  		$attachment->filename = $file->getClientOriginalName();
+					  		$attachment->size = $file->getClientSize();
+					  		$attachment->update_id = $post->id;
+					  		$attachment->type = pathinfo($this->upload_dir.$post->id.'/'.$file->getClientOriginalName(), PATHINFO_EXTENSION);
+					  		$attachment->save();
+					  	} else {
+					  		$success = false;
+					  	}
+					  }
+					}
+					if($success) {
+						return redirect('about/news/'.$post->id);
+					}
+				}
+				return redirect('about/news');
+			} else {
+				return 'Error';
 			}
-			
-			$files = $request->file('attachments');
-			if(count($files))
-			{
-				if(!is_dir($this->upload_dir.$post->id))
-				 {
-				 	mkdir($this->upload_dir.$post->id);
-				 }
-				$success = true;
-				foreach($files as $file) {
-				  if(!is_null($file) && $file->isValid()) {
-				  	if($file->move($this->upload_dir.$post->id, $file->getClientOriginalName()))
-				  	{
-				  		$attachment = new Attachment();
-				  		$attachment->filename = $file->getClientOriginalName();
-				  		$attachment->size = $file->getClientSize();
-				  		$attachment->update_id = $post->id;
-				  		$attachment->type = pathinfo($this->upload_dir.$post->id.'/'.$file->getClientOriginalName(), PATHINFO_EXTENSION);
-				  		$attachment->save();
-				  	} else {
-				  		$success = false;
-				  	}
-				  }
-				}
-				if($success) {
-					return redirect('about/news/'.$post->id.'/edit');
-				}
-			}
-			return redirect('about/news');
 		} else {
-			return 'Error';
+			return redirect('about/news/'.$post->id.'/edit')->withInput();
 		}
 	}
 
@@ -232,35 +251,11 @@ class UpdateController extends Controller {
 
 	public function getTweets()
 	{
-		$twitter = json_decode(Twitter::getUserTimeline(['screen_name' => 'HPS43', 'count' => 10, 'format' => 'json']));
+		$twitter = json_decode(Twitter::getUserTimeline(['screen_name' => 'Pound_Hill', 'count' => 10, 'format' => 'json']));
 		foreach($twitter as $tweet) {
 			$tweet->ago = new Carbon($tweet->created_at);
 		}
 		return $twitter;
-	}
-
-	public function getRemoteEvents()
-	{
-		$now = Carbon::now();
-		if($now->month < 9) {
-			$startYear = ($now->year - 1);
-			$endYear = ($now->year);
-		} else {
-			$startYear = ($now->year);
-			$endYear = ($now->year + 1);
-		}
-		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, 'http://holmbush.eschools.co.uk/cms/cms_pages/get_calendar_source/x/x/0');
-		curl_setopt($ch, CURLOPT_USERAGENT,'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/32.0.1700.107 Chrome/32.0.1700.107 Safari/537.36');
-		curl_setopt($ch, CURLOPT_POST, true);
-		curl_setopt($ch, CURLOPT_POSTFIELDS, "start=".strtotime($startYear.'-09-01')."&end=".strtotime($endYear.'-07-31'));
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-		$ret = curl_exec($ch);
-		if (curl_error($ch)) {
-		    echo curl_error("Error on line 62: ".$ch);
-		}
-		return $ret;
 	}
 
 }
