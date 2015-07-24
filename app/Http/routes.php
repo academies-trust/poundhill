@@ -54,6 +54,7 @@ Route::get('about/aims', 'HomeController@aims');
 Route::get('about/safeguarding', 'HomeController@safeguarding');
 //Route::get('about/galleries', 'HomeController@galleries');
 Route::get('about/newsletters', 'HomeController@newsletters');
+Route::get('about/staff', 'HomeController@staff');
 Route::get('community/ourcommunity', 'HomeController@ourcommunity');
 Route::get('community/governors', 'HomeController@governors');
 Route::get('community/ptfa', 'HomeController@ptfa');

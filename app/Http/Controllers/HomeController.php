@@ -83,9 +83,14 @@ class HomeController extends Controller {
 		return view('about.galleries');
 	}
 
-		public function newsletters()
+	public function newsletters()
 	{
 		return view('about.newsletters');
+	}
+
+	public function staff()
+	{
+		return view('about.staff');
 	}
 
 	public function aims()

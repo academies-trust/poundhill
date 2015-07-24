@@ -2,13 +2,7 @@
 
 @section('hero')	
 	<div class="hero">
-		@foreach($slides as $slide)
-			@if($slides[0] == $slide)
-				<img class="hero-image show" src='{{url()}}/img/heroes/{{$slide}}?w=1920&h=500&fit=crop'>
-			@else
-				<img class="hero-image" src='{{url()}}/img/heroes/{{$slide}}?w=1920&h=500&fit=crop'>
-			@endif
-		@endforeach
+				<img class="hero-image show" src='{{url()}}/img/heroes/pound-hil.png?w=1920&h=500&fit=crop'>
 		<div class="container">
 			<!--<div class="heroCaption col-md-4 col-sm-6">
 				
@@ -26,23 +20,36 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
+		<div class="row">
+								<div class="col-md-8">
+
+					
 			<article>
 				<header>
 					<h1>Welcome to Pound Hill Infant Academy</h1>
 				</header>
 				<div class="row">
-					<div class="col-md-3">
-						<img src="http://www.clker.com/cliparts/z/m/8/5/X/9/little-orange-bird-md.png">
-					</div>
-					<div class="col-md-9">
+					<div class="col-md-12">
 						<p><strong>We are a large infant school with 270 pupils, located in Crawley, West Sussex.  We aim to treat every child as an individual and provide a happy, welcoming, thriving environment.  We offer exciting learning experiences which have creativity at the heart, balancing the teaching of knowledge and skills, and encouraging innovation.  All our children are expected to be responsible members of their community, understanding and respecting everyone’s rights, different values and traditions, and playing an active role in the development of our school.   Our overall vision is that all members of our community are successful learners, responsible citizens, effective contributors and happy, confident individuals.</p>
 						<footer>
 							<h3>Miss Julie Knock-Bravery</h3>
-							<h4>Headteacher</h4>
+							<h4>Principal</h4>
 						</footer>
 					</div>
+
 				</div>
 			</article>
+			</div>
+			<div class="col-md-4">
+			<div class="sclp">
+			<a href="#">
+<img src="http://www.sclpalliance.org.uk/wp-content/themes/sclp/images/logo.png">
+					<h1>The Southern Collaborative Learning Partnership (SCLP) Alliance</h1>
+</a></div>
+					
+						</div>
+
+			</div>
 			<section class="news-container">
 				<header>
 					<h1>News and Events</h1>
@@ -51,7 +58,7 @@
 					<div class="col-md-4 news-block events-post">
 						<section>
 							<header class="text-center">
-								<a href="{{url('about/news#events')}}">
+								<a href="#">
 									<span class="glyphicon glyphicon-calendar"></span>
 									<h4>Upcoming Events</h4>
 								</a>
@@ -76,7 +83,7 @@
 										<a href="{{URL::current()}}/about/news/{{$new->id}}/edit"><btn class="btn btn-default action">Edit</btn></a>
 									@endif
 									<figure>
-										<a href="{{url()}}/about/news/{{$new->id}}">
+										<a href="#">
 											@if(is_null($new->featured) || $new->featured=="") 
 												<img src="{{url()}}/img/generic/{{$news->getRandomImage()}}?w=350&h=250&fit=crop">
 											@else
@@ -85,7 +92,7 @@
 										</a>
 									</figure>
 									<header>
-										<h4><a href="{{url()}}/about/news/{{$new->id}}">{{$new->title}}</a></h4>
+										<h4><a href="#">{{$new->title}}</a></h4>
 										<h5 class="date pull-right">{{$difference = ($new->published_on->diff($now)->days < 1) ? 'today' : $new->published_on->diffForHumans()}}</h5>
 										@if(Auth::check())
 											@if(!is_null($new->deleted_at))
@@ -151,7 +158,7 @@
 	</div>
 </div>
 -->
-<div class="container spacer">
+<div class="container">
 	<div class="row">
 		<div class="col-md-12">
 			<header>
@@ -162,7 +169,7 @@
 					<div class="col-md-3 col-sm-3 col-xs-6 news-block twitter-box">
 						<section>
 							<img src="{{url()}}/img/elements/twitterbird.png?w=30" class="pull-left twitter-bird">
-							<p><a href="https://twitter.com/uniofbrighton/status/{{$tweet->id_str}}" target="_blank">{{$tweet->text}}</a></p>
+							<p><a href="https://twitter.com/Pound_Hill/status/{{$tweet->id_str}}" target="_blank">{{$tweet->text}}</a></p>
 							<p class="small text-blue">{{$tweet->ago->diffForHumans()}}</p>
 						</section>
 					</div>

@@ -978,6 +978,7 @@ body {
   line-height: 1.42857143;
   color: #333333;
   background-color: #ffffff;
+
 }
 input,
 button,
@@ -6355,7 +6356,7 @@ label,
   font-weight: 300;
 }
 body {
-  background: #fafafa;
+  
 }
 #nav-mega {
   display: none;
@@ -6968,26 +6969,10 @@ h4 {
 .clndr tr.historic td:first-child {
   text-decoration: line-through;
 }
-body > .container {
-  padding-bottom: 2em;
-}
-#stream {
-  background: blue;
-  background: url('http://www.netanimations.net/water_waves_ocean_ripple_high_quality_animated_gif.gif');
-  min-height: 70px;
-  line-height: 70px;
-  font-size: 2em;
-  text-align: center;
-  color: #fff;
-}
-#main {
-  background: url('http://images.clipartpanda.com/tree-clipart-tree_tiny_green_shaded.png') no-repeat;
-  background-size: 600px;
-  background-position: bottom right;
-}
+
 #main .container,
 #main .container-fluid {
-  background: #fff;
+background: rgba(255, 255, 255, 0.95);
   padding-bottom: 1em;
 }
 input.form-control.picker__input {
@@ -7026,3 +7011,34 @@ input.form-control.picker__input {
     bottom: 1em;
   }
 }
+
+.sclp {
+    margin-top: 25px;
+    border-left: 1px solid #ccc;
+    padding-left: 20px;
+}
+.footer_img{
+    /*margin-top: -240px;*/
+}
+
+/*********************************************************************
+------------------------------ staff pages start -----------------------------
+*********************************************************************/
+.staff_list  tr{
+
+
+}
+.staff_list td{
+padding-left: 15px;
+width: 50%;
+}
+td.staff_category {
+  border-left: none;
+    background-color: #eee;
+    padding-top: 5px;
+    padding-bottom:5px;
+    }
+.spacer td, .head td{border-left: none;}
+/*********************************************************************
+------------------------------ staff pages end------------------------------
+*********************************************************************/

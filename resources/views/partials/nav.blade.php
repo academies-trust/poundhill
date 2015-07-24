@@ -17,7 +17,7 @@
 				<div class="nav-mega-menu-sub col-md-6">
 					<h4>About</h4>
 					<ul>
-						<li><a href="#">About</a></li>
+						<li><a href="{{ url('about/staff') }}">Meet Our Team</a></li>
 						<li><a href="#">Aims and Vision</a></li>
 						<li><a href="#">Safeguarding</a></li>
 						<!--<li><a href="#">Galleries</a></li>-->

@@ -2,7 +2,7 @@
 
 @section('hero')
 	<div class="hero col-md-12">
-		<img class="hero-image show" src='{{url()}}/img/Photos/about_hero.JPG?w=1920&h=500&fit=crop'>
+		<img class="hero-image show" src='{{url()}}/img/heroes/ph-27-03-14-001.jpg?w=1920&h=500&fit=crop'>
 	</div>
 @endsection
 
@@ -17,12 +17,75 @@
 					<h1>Governors</h1>
 				</header>
 				<div class="col-md-12">
-					<p>The Governors of Holmbush Primary Academy are committed to the highest standards of safeguarding within the school, promoting the welfare of children and young people.</p>
-					<p>We expect all staff, volunteers, parents and visitors to share these values and make Holmbush Primary Academy a safe place for our children to be.  Every child’s welfare is our paramount concern.</p>
+					<p>School Governors are a group of people selected from across the community to work with the Headteacher to provide a safe and happy learning environment where every child can succeed according to their ability.</p>
+					<p>Governors are responsible for the strategic direction of the school, establishing suitable policies, monitoring standards and ensuring value for money.</p>
+
+					<table class="staff_list">
+						<tr>
+							<td class="staff_category">Liz Davis</td>
+							<td>Chair of Governors</td>
+						</tr>
+						<tr>
+							<td class="staff_category">Bruce Muirhead</td>
+							<td>Vice Chair</td>
+						</tr>
+						<tr>
+							<td class="staff_category">Julie Knock-Bravery</td>
+							<td>Staff Governor</td>
+						</tr>
+						<tr>
+							<td class="staff_category">Amy Watson</td>
+							<td>Staff Governor</td>
+						</tr>
+						<tr>
+							<td class="staff_category">Kate Hayward</td>
+							<td>Staff Governor</td>
+						</tr>
+						<tr>
+							<td class="staff_category">Georgina Masters</td>
+							<td>Associate Governor</td>
+						</tr>
+						<tr>
+							<td class="staff_category">Andrew Livingstone</td>
+							<td>Local Authority Governor</td>
+						</tr>
+						<tr>
+							<td class="staff_category">Faye Lofty</td>
+							<td>Local Authority Governor</td>
+						</tr>
+						<tr>
+							<td class="staff_category">Rachel Fox</td>
+							<td>Community Governor</td>
+						</tr>
+						<tr>
+							<td class="staff_category">Emma Smith</td>
+							<td>Community Governor</td>
+						</tr>
+						<tr>
+							<td class="staff_category">Angie Cowdry</td>
+							<td>Parent Governor</td>
+						</tr>
+						<tr>
+							<td class="staff_category">Dharma Mahesan</td>
+							<td>Parent Governor</td>
+						</tr>
+						<tr>
+							<td class="staff_category">Lailah Qureshi</td>
+							<td>Parent Governor</td>
+						</tr>
+						<tr>
+							<td class="staff_category">Geoff Crouchn</td>
+							<td>Clerk to Governors</td>
+						</tr>
+						<tr class="spacer"><td >&nbsp;</td></tr>
+					</table>
 				</div>	
 			</article>
+			<p>Governors can be contacted through the school email address or in writing c/o the school.</p>
+			<p><a href="#">office@poundhill....</a></p>
 		</div>
 	</div>
+	<!--
 	<div class="row bg-success padding-x2">
 		<div class="col-md-12">
 			<article>
@@ -37,6 +100,7 @@
 			</article>
 		</div>
 	</div>
+	-->
 </div>
 @endsection
 @section('scripts')

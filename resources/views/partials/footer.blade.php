@@ -1,7 +1,8 @@
 <div id="blind"></div>
-<div class="container-fluid" id="stream">
-	Insert H Two Ooooooooooh-yeah!
+<div class="footer_img">
+<img src="{{url()}}/img/elements/pound-hill-footer.png" width="100%">
 </div>
+
 <div class="container-fluid" id="footer">
 	<div class="row">
 		<footer class="container">
@@ -34,7 +35,7 @@
 							<li><a href="#">Admin Log In</a></li>
 						@endif
 					</ul>
-					<a href="https://twitter.com/uniofbrighton" target="_blank"><img src="{{url()}}/img/elements/twitter.png?w=100&h=100&fit=crop"></a>
+					<a href="https://twitter.com/Pound_Hill" target="_blank"><img src="{{url()}}/img/elements/twitter.png?w=100&h=100&fit=crop"></a>
 				</div>
 			</div>
 		</footer>
