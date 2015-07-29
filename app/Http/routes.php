@@ -58,6 +58,7 @@ Route::get('about/staff', 'HomeController@staff');
 Route::get('community/ourcommunity', 'HomeController@ourcommunity');
 Route::get('community/governors', 'HomeController@governors');
 Route::get('community/ptfa', 'HomeController@ptfa');
+Route::get('community/partnership', 'HomeController@partnership');
 Route::get('learning/everychild', 'HomeController@everychild');
 Route::get('learning/curriculumoverview', 'HomeController@curriculumoverview');
 Route::get('learning/sport', 'HomeController@sport');

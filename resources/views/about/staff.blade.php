@@ -13,9 +13,10 @@
 			<article>
 				<header>
 					<h1>Meet Our Team</h1>
+					<h3>Below is a list of all staff at Pound Hill Infant Academy.</h3>
 				</header>
 				<div class="col-md-12">
-					<p><strong>Below is a list of all staff at Pound Hill.</strong></p>
+					
 					
 					<table class="staff_list">
 						<tr>

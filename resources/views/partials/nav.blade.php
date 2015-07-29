@@ -18,15 +18,16 @@
 					<h4>About</h4>
 					<ul>
 						<li><a href="{{ url('about/staff') }}">Meet Our Team</a></li>
-						<li><a href="#">Aims and Vision</a></li>
-						<li><a href="#">Safeguarding</a></li>
+						<li><a href="{{ url('about/aims') }}">Our Academy Charter</a></li>
+						<li><a href="{{ url('about/safeguarding') }}">Safeguarding</a></li>
 						<!--<li><a href="#">Galleries</a></li>-->
 					</ul>
 				</div>
 				<div class="nav-mega-menu-sub col-md-6">
 					<h4>Community</h4>
 					<ul>
-						<li><a href="#">Crawley School Partnership</a></li>
+						<li><a href="{{ url('community/governors') }}">Governors</a></li>
+						<li><a href="{{ url('community/partnership') }}">Crawley School Partnership</a></li>
 						<li><a href="#">Enhancing the Curriculum</a></li>
 						<li><a href="#">Coco's Africa</a></li>
 					</ul>

@@ -17,90 +17,49 @@
 					<h1>Governors</h1>
 				</header>
 				<div class="col-md-12">
-					<p>School Governors are a group of people selected from across the community to work with the Headteacher to provide a safe and happy learning environment where every child can succeed according to their ability.</p>
-					<p>Governors are responsible for the strategic direction of the school, establishing suitable policies, monitoring standards and ensuring value for money.</p>
-
-					<table class="staff_list">
-						<tr>
-							<td class="staff_category">Liz Davis</td>
-							<td>Chair of Governors</td>
-						</tr>
-						<tr>
-							<td class="staff_category">Bruce Muirhead</td>
-							<td>Vice Chair</td>
-						</tr>
-						<tr>
-							<td class="staff_category">Julie Knock-Bravery</td>
-							<td>Staff Governor</td>
-						</tr>
-						<tr>
-							<td class="staff_category">Amy Watson</td>
-							<td>Staff Governor</td>
-						</tr>
-						<tr>
-							<td class="staff_category">Kate Hayward</td>
-							<td>Staff Governor</td>
-						</tr>
-						<tr>
-							<td class="staff_category">Georgina Masters</td>
-							<td>Associate Governor</td>
-						</tr>
-						<tr>
-							<td class="staff_category">Andrew Livingstone</td>
-							<td>Local Authority Governor</td>
-						</tr>
-						<tr>
-							<td class="staff_category">Faye Lofty</td>
-							<td>Local Authority Governor</td>
-						</tr>
-						<tr>
-							<td class="staff_category">Rachel Fox</td>
-							<td>Community Governor</td>
-						</tr>
-						<tr>
-							<td class="staff_category">Emma Smith</td>
-							<td>Community Governor</td>
-						</tr>
-						<tr>
-							<td class="staff_category">Angie Cowdry</td>
-							<td>Parent Governor</td>
-						</tr>
-						<tr>
-							<td class="staff_category">Dharma Mahesan</td>
-							<td>Parent Governor</td>
-						</tr>
-						<tr>
-							<td class="staff_category">Lailah Qureshi</td>
-							<td>Parent Governor</td>
-						</tr>
-						<tr>
-							<td class="staff_category">Geoff Crouchn</td>
-							<td>Clerk to Governors</td>
-						</tr>
-						<tr class="spacer"><td >&nbsp;</td></tr>
-					</table>
+					<div class="padding-x2 bg-grey">
+					<p>Academy Governors are a group of people selected from across the community to work with the Principal to provide a <strong>safe and happy learning environment</strong> where every child can succeed according to their ability.</p>
+					<p>Governors are responsible for the <strong>strategic direction of the academy</strong>, establishing suitable policies, monitoring standards and ensuring value for money.</p>
+					<p>Governors can be contacted through email at <a href="mailto:office@phiacademy.org.uk">office@phiacademy.org.uk</a> or in writing c/o the Academy.</p>
+					</div>
+				<header>
+					<h2>Our Governors</h2>
+				</header>
+					<dl class="stafflist">
+						<dt>Liz Davis</dt>
+						<dd>Chair of Governors</dd>
+						<dt>Bruce Muirhead</dt>
+						<dd>Vice Chair</dd>
+						<dt>Julie Knock-Bravery</dt>
+						<dd>Staff Governor</dd>
+						<dt>Amy Watson</dt>
+						<dd>Staff Governor</dd>
+						<dt>Kate Hayward</dt>
+						<dd>Staff Governor</dd>
+						<dt>Georgina Masters</dt>
+						<dd>Associate Governor</dd>
+						<dt>Andrew Livingstone</dt>
+						<dd>Local Authority Governor</dd>
+						<dt>Faye Lofty</dt>
+						<dd>Local Authority Governor</dd>
+						<dt>Rachel Fox</dt>
+						<dd>Community Governor</dd>
+						<dt>Emma Smith</dt>
+						<dd>Community Governor</dd>
+						<dt>Angie Cowdry</dt>
+						<dd>Parent Governor</dd>
+						<dt>Dharma Mahesan</dt>
+						<dd>Parent Governor</dd>
+						<dt>Lailah Qureshi</dt>
+						<dd>Parent Governor</dd>
+						<dt>Geoff Crouchn</dt>
+						<dd>Clerk to Governors</dd>
+					</dl>
 				</div>	
 			</article>
-			<p>Governors can be contacted through the school email address or in writing c/o the school.</p>
-			<p><a href="#">office@poundhill....</a></p>
 		</div>
 	</div>
-	<!--
-	<div class="row bg-success padding-x2">
-		<div class="col-md-12">
-			<article>
-				<header>
-					<h2>Documents</h2>
-				</header>
-				<p class="bg-white padding-x2"><span class="glyphicon glyphicon-info-sign text-orange logo"></span> <a href="{{url()}}/docs/governors/adur.pdf" target="_blank">Adur Schools</a></p>
-				<p class="bg-white padding-x2"><span class="glyphicon glyphicon-info-sign text-green logo"></span> <a href="{{url()}}/docs/governors/Gov leaflet.pdf" target="_blank">Governor Leaflet</a></p>
-				<p class="bg-white padding-x2"><span class="glyphicon glyphicon-info-sign text-blue logo"></span> <a href="{{url()}}/docs/governors/Election of Parent Governor.pdf" target="_blank">Election of Parent Governor</a></p>
-				<p class="bg-white padding-x2"><span class="glyphicon glyphicon-info-sign text-red logo"></span> <a href="{{url()}}/docs/governors/Parent Governor nomination form.pdf" target="_blank">Parent Governor nomination form</a></p>
-				<p class="bg-white padding-x2"><span class="glyphicon glyphicon-info-sign text-purple logo"></span> <a href="{{url()}}/docs/governors/Disqualification form.pdf" target="_blank">Disqualification form</a></p>
-			</article>
-		</div>
-	</div>
-	-->
+	
 </div>
 @endsection
 @section('scripts')

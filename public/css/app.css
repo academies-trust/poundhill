@@ -1226,6 +1226,10 @@ mark,
 .text-primary {
   color: #337ab7;
 }
+
+.text-maroon {
+   color:#882e49;
+}
 a.text-primary:hover {
   color: #286090;
 }
@@ -1327,22 +1331,33 @@ dl {
   margin-top: 0;
   margin-bottom: 20px;
 }
-dt,
-dd {
-  line-height: 1.42857143;
-}
+dd,
 dt {
-  font-weight: bold;
-  margin-bottom:1rem;
-  margin-top:2rem;
-  margin-right: 2rem;
-  background: #eee;
-  padding:1rem;
+  padding: 0.5rem 1rem;
 
 }
 dd {
-  margin-left: 0;
+  margin-left: 200px;
+  border-left: 3px solid #882e49; 
 }
+dt {
+  clear:both;
+  font-weight: bold;
+  float: left;
+  text-align: right;
+  width: 200px;
+  margin-right: 1rem;
+  color:#882e49;
+}
+dt,
+dt + dd {
+  border-top: 1px solid #999;
+}
+dd:nth-of-type(odd) {
+  background: #eee;
+}
+
+
 @media (min-width: 768px) {
   .dl-horizontal dt {
     float: left;
