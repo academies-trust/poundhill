@@ -108,6 +108,11 @@ class HomeController extends Controller {
 		return view('community.partnership');
 	}
 
+	public function enhancing()
+	{
+		return view('community.enhancing');
+	}
+
 	public function ptfa()
 	{	
 		$twitter = $this->getTweets();
