@@ -28,7 +28,7 @@
 					<ul>
 						<li><a href="{{ url('community/governors') }}">Governors</a></li>
 						<li><a href="{{ url('community/partnership') }}">Crawley School Partnership</a></li>
-						<li><a href="#">Enhancing the Curriculum</a></li>
+						<li><a href="{{ url('community/enhancing') }}">Enhancing the Curriculum</a></li>
 						<li><a href="#">Coco's Africa</a></li>
 					</ul>
 				</div>
