@@ -98,6 +98,16 @@ class HomeController extends Controller {
 		return view('about.aims');
 	}
 
+	public function vision()
+	{
+		return view('about.vision');
+	}
+
+	public function ourday()
+	{
+		return view('about.ourday');
+	}
+
 	public function ourcommunity()
 	{
 		return view('community.ourcommunity');
@@ -192,6 +202,20 @@ class HomeController extends Controller {
 	public function letters()
 	{
 		return view('parents.letters');
+	}
+
+	public function uniform()
+	{
+		return view('parents.uniform');
+	}
+
+	public function foodanddrink()
+	{
+		return view('parents.foodanddrink');
+	}
+	public function termdates()
+	{
+		return view('parents.termdates');
 	}
 
 	public function admissions()

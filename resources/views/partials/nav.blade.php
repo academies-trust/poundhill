@@ -14,16 +14,18 @@
 		<div id="nav-mega" class="container">
 			<button class="btn btn-danger close-menu">close</button>
 			<div class="nav-mega-menu col-md-12" data-name="about">
-				<div class="nav-mega-menu-sub col-md-6">
+				<div class="nav-mega-menu-sub col-md-4">
 					<h4>About</h4>
 					<ul>
+						<li><a href="{{ url('about/vision') }}">Academy Vision</a></li>
 						<li><a href="{{ url('about/staff') }}">Meet Our Team</a></li>
 						<li><a href="{{ url('about/aims') }}">Our Academy Charter</a></li>
 						<li><a href="{{ url('about/safeguarding') }}">Safeguarding</a></li>
+						<li><a href="{{ url('about/our-day') }}">Our Academy Day</a></li>
 						<!--<li><a href="#">Galleries</a></li>-->
 					</ul>
 				</div>
-				<div class="nav-mega-menu-sub col-md-6">
+				<div class="nav-mega-menu-sub col-md-4">
 					<h4>Community</h4>
 					<ul>
 						<li><a href="{{ url('community/governors') }}">Governors</a></li>
@@ -32,15 +34,24 @@
 						<li><a href="#">Coco's Africa</a></li>
 					</ul>
 				</div>
+				<div class="nav-mega-menu-sub col-md-4">
+					<h4>Partners</h4>
+					<ul>
+						<li><a href="{{ url('partners/parents') }}">Parents and Volunteers</a></li>
+						<li><a href="{{ url('partners/friends') }}">The Friends of Pound Hill</a></li>
+						<li><a href="{{ url('partners/schoolmeeting') }}">The School Meeting</a></li>
+					</ul>
+				</div>
 			</div>
 			<div class="nav-mega-menu col-md-12" data-name="parents">
 				<div class="nav-mega-menu-sub col-md-6">
 					<h4>For Parents</h4>
 					<ul>
-						<!--<li><a href="{{ url('parents/attendance') }}">Absence and Attendance</a></li>
-						<li><a href="{{url()}}/docs/parenthandbook.pdf" target="_blank">Parent Handbook</a></li>-->
-						<li><a href="#">Term Dates</a></li>
-						<li><a href="#">Uniform</a></li>
+						<li><a href="{{ url('parents/attendance') }}">Absence and Attendance</a></li>
+						<!--<li><a href="{{url()}}/docs/parenthandbook.pdf" target="_blank">Parent Handbook</a></li>-->
+						<li><a href="{{ url('parents/termdates') }}">Term Dates</a></li>
+						<li><a href="{{ url('parents/uniform') }}">Uniform</a></li>
+						<li><a href="{{ url('parents/food-and-drink') }}">Food and Drink</a></li>
 						<li><a href="#">eSafety</a></li>
 						<li><a href="#">Letters to Parents</a></li>
 					</ul>
@@ -99,7 +110,7 @@
 				<div class="nav-mega-menu-sub col-md-4">
 					<h4>Statutory Information</h4>
 					<ul>
-						<li><a href="#">Admissions</a></li>
+						<li><a href="{{ url('further/admissions') }}">Admissions</a></li>
 						<li><a href="#" >Pupil Premium</a></li>
 						<li><a href="#">Sports Premium</a></li>
 						<li><a href="#" >SEND Offer</a></li>
@@ -117,9 +128,10 @@
 				<div class="nav-mega-menu-sub col-md-4">
 					<h4>Policies</h4>
 					<ul>
-						<li><a href="#">Charging Policy</a></li>
-						<!--<li><a href="{{url()}}/docs/policies/Encouraging Good Behaviour.pdf" target="_blank">Encouraging Good Behaviour</a></li>
-						<li><a href="{{ url('further/policies') }}">View All</a></li>-->
+						<li><a href="{{url()}}/docs/policies/charging.pdf" target="_blank">Charging Policy</a></li>
+						<li><a href="{{url()}}/docs/policies/Child Protection.pdf" target="_blank">Child Protection</a></li>
+						<li><a href="{{url()}}/docs/policies/Curriculum_policy.pdf" target="_blank">Curriculum Policy</a></li>
+						<li><a href="{{ url('further/policies') }}">View All</a></li>
 					</ul>
 				</div>
 			</div>

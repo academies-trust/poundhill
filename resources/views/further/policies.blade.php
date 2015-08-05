@@ -2,7 +2,7 @@
 
 @section('hero')
 	<div class="hero col-md-12 nopad">
-		<img class="hero-image show" src='{{url()}}/img/generic/Education_Primary_097.jpg?w=1920&h=500&fit=crop&crop=center'>
+		<img class="hero-image show" src='{{url()}}/img/headers/ph-27-03-14-115.jpg?w=1920&h=500&fit=crop&crop=center'>
 	</div>
 @endsection
 
@@ -24,10 +24,7 @@
 					<ul>
 						<li><a href="{{url()}}/docs/policies/charging.pdf" target="_blank">Charging Policy</a></li>
 						<li><a href="{{url()}}/docs/policies/Child Protection.pdf" target="_blank">Child Protection</a></li>
-						<li><a href="{{url()}}/docs/policies/Encouraging Good Behaviour.pdf" target="_blank">Encouraging Good Behaviour</a></li>
-						<li><a href="{{url()}}/docs/policies/Safeguarding.pdf" target="_blank">Safeguarding</a></li>
-						<li><a href="{{url()}}/docs/policies/Uniform policy.pdf" target="_blank">Uniform Policy</a></li>
-						<li><a href="{{url()}}/docs/Healthy Schools Policy.pdf" target="_blank">Healthy Schools Policy</a></li>
+						<li><a href="{{url()}}/docs/policies/Fundamental British Values.pdf" target="_blank">Fundamental British Values</a></li>
 						<li><a href="{{url()}}/docs/policies/Curriculum_policy.pdf" target="_blank">Curriculum Policy</a></li>
 						</ul>
 					</div>

@@ -2,7 +2,7 @@
 
 @section('hero')
 	<div class="hero col-md-12 nopad">
-		<img class="hero-image show" src='{{url()}}/img/generic/Education_Primary_097.jpg?w=1920&h=500&fit=crop&crop=center'>
+		<img class="hero-image show" src='{{url()}}/img/generic/IMG_8465.jpg?w=1920&h=500&fit=crop&crop=center'>
 	</div>
 @endsection
 
@@ -17,10 +17,10 @@
 					<h1>Admissions</h1>
 				</header>
 				<h3>Admissions Policy</h3>
-				<p>Holmbush Primary Academy’s admissions policy and procedure is governed by the University of Brighton Academies Trust’s Funding Agreement with the Secretary of State. The academy has a Supplemental Funding Agreement (SFA) which includes the policy on admissions arrangements in the academy. The admissions policy will shortly be published <a href="https://www.brighton.ac.uk/academiestrust/how-we-work/our-policies/index.aspx" target="_blank">here.</a></p>
-				<p>The admissions arrangements have not changed since Holmbush Primary School became an academy.</p>
+				<p>Pound Hill Infant Academy’s admissions policy and procedure is governed by the University of Brighton Academies Trust’s Funding Agreement with the Secretary of State. The academy has a Supplemental Funding Agreement (SFA) which includes the policy on admissions arrangements in the academy. The admissions policy will shortly be published <a href="https://www.brighton.ac.uk/academiestrust/how-we-work/our-policies/index.aspx" target="_blank">here.</a></p>
+				<p>The admissions arrangements have not changed since Pound Hill Infant School became an academy.</p>
 				<h3>Applying for a place at the academy</h3>
-				<p>Holmbush Primary Academy will consider all applications for places.</p>
+				<p>Pound Hill Infant Academy will consider all applications for places.</p>
 				<h3>Reception year admissions <small>(the Normal Admissions Round)</small></h3>
 				<p>Most pupils join at the start of the Reception year. Applications will be made in accordance with West Sussex County Council’s coordinated admissions arrangements and will be made on the application provided and administered by West Sussex County Council’s Admissions Team.</p>
 				<p>A leaflet describing the admissions process, and application form, are available from West Sussex County Council or online here.</p>
@@ -54,7 +54,7 @@
 					<li>5.	Children who live outside the catchment area who have brothers or sisters already at the academy at the time of application and will still be in the academy at the time of admission. Brothers or sisters may be half or step-siblings (by marriage or co-habitation) or foster siblings but must be living permanently at the same address.</li>
 					<li>6.	Other children who live outside the catchment area</li>
 				</ol>
-				<p>Details of the catchment area for the academy is shown on the diagram available <a href="{{url()}}/docs/Holmbush Primary Catchment Map.pdf" target="_blank">here</a>.</p>
+				<!--<p>Details of the catchment area for the academy is shown on the diagram available <a href="{{url()}}/docs/Holmbush Primary Catchment Map.pdf" target="_blank">here</a>.</p>-->
 				<h4>Tie breaker - oversubscription</h4>
 				<p>If there are more children who qualify for a place than places available, places will be allocated to pupils living closest to the academy (using the shortest distance from home to school using a straight line distance. All distances are measured by a straight line from the academy to the child’s home address, using Ordnance Survey address point data from a central point in each building.</p> 
 				<h3>In Year Admissions <small>(Applications to the academy outside the normal admissions round)</small></h3>
@@ -70,9 +70,9 @@
 				<p>If you wish to query availability of spaces please email the Trust’s Admissions Manager <a href="mailto:academiestrust@brighton.ac.uk">(AcademiesTrust@brighton.ac.uk)</a> stating clearly to which academy you are referring and the year group in which you are interested.</p>
 				<p>The oversubscription criteria referred to above also apply where the number of applications for in year admission is greater than the number of places.</p>
 				<h3>Admissions Numbers</h3>
-				<p>Holmbush Primary Academy has a Published Admission Number of 30, which applies to the Reception Year only. Admissions to other year groups are based upon (a) the size of teaching groups already existing in the academy and (b) the efficient use of resources.</p>
+				<p>Pound Hill Infant Academy has a Published Admission Number of 30, which applies to the Reception Year only. Admissions to other year groups are based upon (a) the size of teaching groups already existing in the academy and (b) the efficient use of resources.</p>
 				<h3>Waiting Lists</h3>
-				<p>Holmbush Primary Academy will operate a waiting list. Where in any year the academy receives more applications for places than there are places available, a waiting list will operate for unsuccessful applicants to the Reception Year. Waiting lists will also be maintained for other year groups when these year groups are full.</p>
+				<p>Pound Hill Infant Academy will operate a waiting list. Where in any year the academy receives more applications for places than there are places available, a waiting list will operate for unsuccessful applicants to the Reception Year. Waiting lists will also be maintained for other year groups when these year groups are full.</p>
 				<p>If you would like to place your child’s name on the waiting list for the relevant year group following an unsuccessful application, please submit your request in writing to the Trust’s Admissions Manager <a href="mailto:academiestrust@brighton.ac.uk">(AcademiesTrust@brighton.ac.uk)</a>.</p>
 				<p>A child’s position on the waiting list will be determined solely in accordance with the oversubscription criteria set out above. When places become vacant they will be allocated to children on the waiting list in accordance with the oversubscription criteria.</p>
 				<div class="grey-container padding-x2 margin-bottom spacer">
