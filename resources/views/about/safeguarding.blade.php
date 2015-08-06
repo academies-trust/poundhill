@@ -2,7 +2,7 @@
 
 @section('hero')
 	<div class="hero col-md-12">
-		<img class="hero-image show" src='{{url()}}/img/generic/ph-27-03-14-094.jpg?w=1920&h=500&fit=crop&crop=center'>
+		<img class="hero-image show" src='{{url()}}/img/headers/ph-27-03-14-006.jpg?w=1920&h=500&fit=crop&crop=center'>
 	</div>
 @endsection
 
@@ -22,7 +22,7 @@
 					<p>We recognise that all adults, including temporary staff, volunteers and governors, have a full and active part to play in protecting our pupils from harm, and that the child’s welfare is our paramount concern.</p>
 					<p>All staff members believe that our school should provide a caring, positive safe and stimulating environment that promotes the social, physical and moral development of the individual child.</p>
 					<p><strong>Designated Child Protection Leader:</strong> Julie Knock-Bravery Headteacher</p>
-					<p class="spacer"><span class="glyphicon glyphicon-info-sign logo"></span><strong>For more information please read our <a href="{{url()}}/docs/policies/PHI Child Protection Policy 2015.pdf" target="_blank">Child Protection Policy</a>.</strong></p>
+					<p class="spacer"><span class="glyphicon glyphicon-info-sign logo"></span><strong>For more information please read our <a href="{{url()}}/docs/policies/Child Protection.pdf" target="_blank">Child Protection Policy</a>.</strong></p>
 				</div>
 				
 			</article>
