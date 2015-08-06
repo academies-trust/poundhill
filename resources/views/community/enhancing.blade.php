@@ -2,7 +2,7 @@
 
 @section('hero')
 	<div class="hero col-md-12">
-		<img class="hero-image show" src='{{url()}}/img/generic/ph-27-03-14-077.jpg?w=1920&h=500&fit=crop'>
+		<img class="hero-image show" src='{{url()}}/img/headers/ph-27-03-14-111.jpg?w=1920&h=500&fit=crop'>
 	</div>
 @endsection
 
@@ -43,7 +43,7 @@
 					<h3>Forest Schools Programme</h3>
 				</header>
 					<p>At Pound Hill Infant Academy we believe children benefit from real life ‘hands on’ experiences where they can see, hear, touch and explore the world around them and have opportunities to experience challenge and adventure.   These experiences take place in our academy grounds, in the local environment and further afield, such as a local forest.</p>
-					<p>We also have trained Forest Schools Leaders and Assistants within our staff team.  Forest Schools is all about getting out into the woods to explore and learn.  It was developed in Scandinavia in the 1950’s – using woodland as an ‘outdoor classroom’, helping young people to learn about the natural world.  During our Forest School Programme the children visit a local forest school site for a number of sessions.  We plan a range of activities, which are tailored to the children’s interests and abilities.</p>					
+					<p>We also have trained Forest Schools Leaders and Assistants within our staff team.  Forest Schools is all about getting out into the woods to explore and learn.  It was developed in Scandinavia in the 1950s – using woodland as an ‘outdoor classroom’, helping young people to learn about the natural world.  During our Forest School Programme the children visit a local forest school site for a number of sessions.  We plan a range of activities, which are tailored to the children’s interests and abilities.</p>					
 				</div>	
 			</article>
 		</div>
