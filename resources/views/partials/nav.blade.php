@@ -5,7 +5,7 @@
 			<ul class="nav col-md-12">
 				<li class="mega-link col-md-2 text-center" data-name="about"><a>About Us</a></li>
 				<li class="mega-link col-md-2 text-center" data-name="parents"><a>For Parents</a></li>
-				<li class="col-md-2 text-center"><a href="#">News and Events</a></li>
+				<li class="mega-link col-md-2 text-center" data-name="news"><a>News and Events</a></li>
 				<li class="mega-link col-md-2 text-center" data-name="learning"><a>Learning</a></li>
 				<li class="mega-link col-md-2 text-center" data-name="further"><a>Further Info</a></li>
 				<li class="col-md-2 text-center"><a href="#">SCLP Alliance</a></li>
@@ -31,7 +31,7 @@
 						<li><a href="{{ url('community/governors') }}">Governors</a></li>
 						<li><a href="{{ url('community/partnership') }}">Crawley School Partnership</a></li>
 						<li><a href="{{ url('community/enhancing') }}">Enhancing the Curriculum</a></li>
-						<li><a href="#">Coco's Africa</a></li>
+						<li><a href="{{ url('community/coco') }}">Coco's Africa</a></li>
 					</ul>
 				</div>
 				<div class="nav-mega-menu-sub col-md-4">
@@ -59,9 +59,16 @@
 				<div class="nav-mega-menu-sub col-md-6">
 					<h4>Partners</h4>
 					<ul>
-						<li><a href="#">Parents and Volunteers</a></li>
-						<li><a href="#">The Friends of Pound Hill Infant Academy</a></li>
-						<li><a href="#">The School Meeting</a></li>
+						<li><a href="{{ url('partners/parents') }}">Parents and Volunteers</a></li>
+						<li><a href="{{ url('partners/friends') }}">The Friends of Pound Hill Infant Academy</a></li>
+						<li><a href="{{ url('partners/schoolmeeting') }}">The School Meeting</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="nav-mega-menu col-md-12" data-name="news">
+				<div class="nav-mega-menu-sub col-md-6">
+										<ul>
+						<li><a href="{{ url('news/events') }}">After School Events/Clubs</a></li>
 					</ul>
 				</div>
 			</div>

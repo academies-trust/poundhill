@@ -2,7 +2,7 @@
 
 @section('hero')
 	<div class="hero col-md-12">
-		<img class="hero-image show" src='{{url()}}/img/generic/ph-27-03-14-077.jpg?w=1920&h=500&fit=crop'>
+		<img class="hero-image show" src='{{url()}}/img/headers/ph-27-03-14-015.jpg?w=1920&h=500&fit=crop'>
 	</div>
 @endsection
 

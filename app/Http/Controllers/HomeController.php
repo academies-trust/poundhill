@@ -134,6 +134,26 @@ class HomeController extends Controller {
 		return view('community.ptfa',compact('twitter'));
 	}
 
+	public function partners()
+	{
+		return view('partners.partners');
+	}
+
+	public function parents()
+	{
+		return view('partners.parents');
+	}
+
+	public function friends()
+	{
+		return view('partners.friends');
+	}
+
+	public function schoolmeeting()
+	{
+		return view('partners.schoolmeeting');
+	}
+
 	public function everychild()
 	{
 		return view('learning.everychild');
@@ -216,6 +236,11 @@ class HomeController extends Controller {
 	public function termdates()
 	{
 		return view('parents.termdates');
+	}
+
+	public function events()
+	{
+		return view('news.events');
 	}
 
 	public function admissions()
