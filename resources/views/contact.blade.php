@@ -2,7 +2,7 @@
 
 @section('hero')
 	<div class="hero col-md-12 nopad">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2519.299658460762!2d-0.24620699999999998!3d50.844134999999994!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4875909d86ba1e91%3A0x14cde81e6c70166a!2sHolmbush+Primary+School!5e0!3m2!1sen!2sus!4v1427109509096" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.396214117663!2d-0.1539578!3d51.1195993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4875f1bd0b213e05%3A0x4f01de22ed3c1a5f!2sPound+Hill+Infant+School!5e0!3m2!1sen!2suk!4v1438858850412" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
 	</div>
 @endsection
 
@@ -20,25 +20,26 @@
 		</div>
 		<div class="col-md-4">
 			<h2><span class="glyphicon glyphicon-user text-green"></span> Main Contacts</h2>
-			<p><span class="text-green"><b>Principal:</b></span> Mrs Rebecca Jackson</p>
-			<p><span class="text-green"><b>Vice Principal:</b></span> Miss Susan Stickley</p>
-			<p><span class="text-green"><b>Pastoral Coordinator:</b></span> Mrs Stepney</p>
+			<p><span class="text-green"><b>Principal:</b></span> Miss Julie Knock-Bravery</p>
+			<p><span class="text-green"><b>Director of Teaching School and Head of Resources:</b></span> Mrs Georgina Masters</p>
+			<p><span class="text-green"><b>Office Administration Team:</b></span> Mrs J Cox and Mrs S Meyer</p>
 		</div>
 		<div class="col-md-4">
 			<h2><span class="glyphicon glyphicon-home text-green"></span> Address</h2>
 			<address>	
-				<b>Holmbush Primary Academy</b><br />
-				Hawkins Crescent,<br />
-				Shoreham-By-Sea,<br />
+				<b>Pound Hill Infant Academy</b><br />
+				Crawley Lane,<br />
+				Pound Hill,<br />
+				Crawley,<br />
 				West Sussex,<br />
-				BN43 6TN
+				RH10 7EB
 			</address>
 		</div>
 		<div class="col-md-4">
 			<h2><span class="glyphicon glyphicon-phone-alt text-green"></span> Phone &amp; Email</h2>
-			<p><strong>Tel:</strong>  01273 592471</p>
-			<!--<p><strong>Fax:</strong>  01273 592471</p>-->
-			<p><strong>Email:</strong> <a href="mailto:office@blackthornsprimaryacademy.org.uk">office@holmbushprimaryacademy.org.uk</a></p>
+			<p><strong>Tel:</strong>  01293 873975</p>
+			<p><strong>Email:</strong> <a href="mailto:office@blackthornsprimaryacademy.org.uk">office@phiacademy.org.uk</a></p>
+			<p>All enquiries regarding <strong>SCLP Teaching School Alliance</strong> training courses should be sent to: <a href="mailto:sclptsabooking@poundhillinfant.org.uk">sclptsabooking@poundhillinfant.org.uk</a></p>
 		</div>
 	</div>
 	<div class="row padding-x2 spacer">

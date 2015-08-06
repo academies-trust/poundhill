@@ -288,7 +288,7 @@ class HomeController extends Controller {
 		Mail::send('emails.contact', ['input' => $request->input()], function($message) use ($request)
 		{
 			$message->from($request->email, $request->name);
-		    $message->to('office@holmbushprimaryacademy.org.uk', 'Office')->subject('Contact Form Message');
+		    $message->to('office@phiacademy.org.uk', 'Office')->subject('Contact Form Message');
 		});
 
 		return redirect('contact');

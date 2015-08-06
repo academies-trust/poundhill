@@ -22,7 +22,7 @@
 						<li><a href="{{ url('about/aims') }}">Our Academy Charter</a></li>
 						<li><a href="{{ url('about/safeguarding') }}">Safeguarding</a></li>
 						<li><a href="{{ url('about/our-day') }}">Our Academy Day</a></li>
-						<!--<li><a href="#">Galleries</a></li>-->
+						<li><a href="{{ url('contact') }}">Contact Us</a></li>
 					</ul>
 				</div>
 				<div class="nav-mega-menu-sub col-md-4">
