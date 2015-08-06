@@ -18,7 +18,7 @@
 				</header>
 				<div class="col-md-12">
 					
-					<p>We have strong links with the Coco’s Africa Foundation, set up by Chris Connor's, CoCo's Hair Salon, Miadenbower, Crawley. The Foundation supports children in South Africa in a varity of ways .  More information can be found at: <a href="www.cocosfoundation.co.uk" target="_blank">www.cocosfoundation.co.uk</a></p>
+					<p>We have strong links with the Coco’s Foundation, set up by Chris Connor of CoCo's Hair Salon, Miadenbower, Crawley. The Foundation supports children in South Africa in a varity of ways .  More information can be found at: <a href="www.cocosfoundation.co.uk" target="_blank">www.cocosfoundation.co.uk</a></p>
 					<p>Our work with the charity is linked to the Rights on our School Charter:</p>
 						<ul>
 							<li>the right to learn</li>
