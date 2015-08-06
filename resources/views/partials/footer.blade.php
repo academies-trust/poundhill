@@ -23,16 +23,14 @@
 				<div class="col-md-4 col-sm-4 col-xs-12 text-right">
 					<h3>Quick Links</h3>
 					<ul class="quicklinks">
-						<!--<li><a href="{{ url('contact') }}">Contact</a></li>-->
-						<li><a href="#">Contact</a></li>
+						<li><a href="{{ url('contact') }}">Contact</a></li>
 						<li><a href="https://www.brighton.ac.uk/academiestrust/how-we-work/working-for-us/index.aspx" target="_blank">Vacancies</a></li>
 						<!--<li><a href="https://login.microsoftonline.com/" target="_blank">Staff Email</a></li>-->
 						<li><a href="http://poundhillinfant.eschools.co.uk/" target="_blank">Learning Platform</a></li>
 						@if(Auth::check())
 							<li><a href="{{url()}}/auth/logout">Log Out</a></li>
 						@else
-							<!--<li><a href="{{url()}}/auth/login">Admin Log In</a></li>-->
-							<li><a href="#">Admin Log In</a></li>
+							<li><a href="{{url()}}/auth/login">Admin Log In</a></li>
 						@endif
 					</ul>
 					<a href="https://twitter.com/Pound_Hill" target="_blank"><img src="{{url()}}/img/elements/twitter.png?w=100&h=100&fit=crop"></a>
