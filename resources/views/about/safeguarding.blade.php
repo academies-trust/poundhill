@@ -22,7 +22,7 @@
 					<p>We recognise that all adults, including temporary staff, volunteers and governors, have a full and active part to play in protecting our pupils from harm, and that the child’s welfare is our paramount concern.</p>
 					<p>All staff members believe that our school should provide a caring, positive safe and stimulating environment that promotes the social, physical and moral development of the individual child.</p>
 					<p><strong>Designated Child Protection Leader:</strong> Julie Knock-Bravery Headteacher</p>
-					<p class="spacer"><span class="glyphicon glyphicon-info-sign logo"></span><strong>For more information please read our <a href="{{url()}}/docs/policies/Child Protection.pdf" target="_blank">Child Protection Policy</a>.</strong></p>
+					<p class="bg-info padding-x2"><span class="glyphicon glyphicon-info-sign logo"></span><strong>For more information please read our <a href="{{url()}}/docs/policies/Safeguarding.pdf" target="_blank">Safeguarding</a> and <a href="{{url()}}/docs/policies/Child Protection.pdf" target="_blank">Child Protection</a> policies.</strong></p>
 				</div>
 				
 			</article>
