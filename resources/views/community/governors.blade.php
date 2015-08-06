@@ -19,7 +19,7 @@
 				<div class="col-md-12">
 					<div class="padding-x2 bg-grey">
 					<p>Academy Governors are a group of people selected from across the community to work with the Principal to provide a <strong>safe and happy learning environment</strong> where every child can succeed according to their ability.</p>
-					<p>Governors are responsible for the <strong>strategic direction of the academy</strong>, establishing suitable policies, monitoring standards and ensuring value for money.</p>
+					<p>Governors are responsible for the <strong>strategic direction of the Academy</strong>, establishing suitable policies, monitoring standards and ensuring value for money.</p>
 					<p>Governors can be contacted through email at <a href="mailto:office@phiacademy.org.uk">office@phiacademy.org.uk</a> or in writing c/o the Academy.</p>
 					</div>
 				<header>
