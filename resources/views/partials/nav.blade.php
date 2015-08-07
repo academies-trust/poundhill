@@ -118,9 +118,9 @@
 					<h4>Statutory Information</h4>
 					<ul>
 						<li><a href="{{ url('further/admissions') }}">Admissions</a></li>
-						<li><a href="#" >Pupil Premium</a></li>
-						<li><a href="#">Sports Premium</a></li>
-						<li><a href="#" >SEND Offer</a></li>
+						<li><a href="{{url()}}/docs/policies/Pupil Premium 2013-2014.pdf" target="_blank">Pupil Premium</a></li>
+						<li><a href="{{url()}}/docs/policies/Sports Grant Report 2014-2015.pdf" target="_blank">Sports Premium</a></li>
+						<li><a href="{{url()}}/docs/policies/ENE Policy 2014.pdf" target="_blank">SEND Offer</a></li>
 					</ul>
 				</div>
 				<div class="nav-mega-menu-sub col-md-4">
