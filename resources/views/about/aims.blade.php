@@ -21,7 +21,8 @@
 	</div>
 	<div class="row">
 		<div class="col-md-12">
-			<p>Our academy has developed its own Academy Charter, which is based on the UNICEF Rights, Respecting School programme.  We put a great deal of emphasis on rewarding children for being responsible and ensuring the rights of others are respected. We also have a very structured approach to using sanctions for inappropriate behaviour, and have developed a comprehensive Anti-Bullying Policy with members of our academy community, both of which are implemented consistently throughout the academy.</p>
+			<p><strong class="text-maroon">Our academy has developed its own Academy Charter, which is based on the UNICEF Rights, Respecting School programme.</strong><br />
+			  We put a great deal of emphasis on rewarding children for being responsible and ensuring the rights of others are respected. We also have a very structured approach to using sanctions for inappropriate behaviour, and have developed a comprehensive Anti-Bullying Policy with members of our academy community, both of which are implemented consistently throughout the academy.</p>
 			<table class="table table-bordered">
 			<thead>
 				<tr class="text-maroon">
@@ -31,37 +32,37 @@
 			</thead>
 			<tbody>
 				<tr class="bg-info">
-					<td>The Right to learn</td>
+					<td>The right to learn</td>
 					<td>We will listen and be listened to<br />
 					We will not call out<br />
 					We will do our best</td>
 				</tr>
 				<tr class="bg-warning">
-					<td>The Right to play and have friends</td>
+					<td>The right to play and have friends</td>
 					<td>We will share<br />
 					We will be kind and gentle<br />
 					We will look after each other</td>
 				</tr>
 				<tr class="bg-info">
-					<td>The Right to feel and be safe</td>
+					<td>The right to feel and be safe</td>
 					<td>We will look after our things<br />
 					We will tidy up<br />
 					We will not hurt people</td>
 				</tr>
 				<tr class="bg-warning">
-					<td>The Right to feel included</td>
+					<td>The right to feel included</td>
 					<td>We will work as a team<br />
 					We will not leave people out<br />
 					We will help each other</td>
 				</tr>
 				<tr class="bg-info">
-					<td>The Right to be heard</td>
+					<td>The right to be heard</td>
 					<td>We will share our ideas<br />
 					We will listen to others<br />
 					We will have a go</td>
 				</tr>
 				<tr class="bg-warning">
-					<td>The Right to be me</td>
+					<td>The right to be me</td>
 					<td>We will accept that we are all different<br />
 					We will say well done<br />
 					We will be honest</td>
