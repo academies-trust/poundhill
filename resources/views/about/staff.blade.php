@@ -13,7 +13,7 @@
 			<article>
 				<header>
 					<h1>Meet Our Team</h1>
-					<h3>Below is a list of all staff at Pound Hill Infant Academy.</h3>
+				
 				</header>
 				<div class="col-md-12">
 					
@@ -22,12 +22,12 @@
 						<tr>
 							<td class="staff_category">Leadership Team</td>
 							<td>
-							Julie Knock-Bravery, Headteacher
-							<br>Amy Watson, Deputy Headteacher/Additional Needs Leader
-							<br>Joanna Brewis, Teaching School CPD and Lead Coach/Mentor
-							<br>Christina Delgado, Early Years Leader
-							<br>Sarah Stallard, Key Stage 1 Leader
-							<br>Georgina Masters, Director of Teaching School and Head of Resources
+							Julie Knock-Bravery, <i class="text-maroon">Headteacher</i>
+							<br>Amy Watson, <i class="text-maroon">Deputy Headteacher/Additional Needs Leader</i>
+							<br>Joanna Brewis, <i class="text-maroon">Teaching School CPD and Lead Coach/Mentor</i>
+							<br>Christina Delgado, <i class="text-maroon">Early Years Leader</i>
+							<br>Sarah Stallard, <i class="text-maroon">Key Stage 1 Leader</i>
+							<br>Georgina Masters, <i class="text-maroon">Director of Teaching School and Head of Resources</i>
 							</td>
 						</tr>
 	<tr class="spacer"><td >&nbsp;</td></tr>
@@ -49,17 +49,17 @@
 						<tr class="spacer"><td >&nbsp;</td></tr>
 						<tr>
 							<td class="staff_category">Office Staff</td>
-							<td>Vanessa Gilbertson, Business Manager
-								<br>Sue Meyer, School Data Administrator
-								<br>Vacancy, Teaching School Administrator
-								<br>Janine Cox, Receptionist/Clerical Assistant
+							<td>Vanessa Gilbertson, <i class="text-maroon">Business Manager</i>
+								<br>Sue Meyer, <i class="text-maroon">School Data Administrator</i>
+								<br>Vacancy, <i class="text-maroon">Teaching School Administrator</i>
+								<br>Janine Cox, <i class="text-maroon">Receptionist/Clerical Assistant</i>
 							</td>
 						</tr>
 						<tr class="spacer"><td >&nbsp;</td></tr>
 						<tr>
 							<td class="staff_category">Pastoral Support</td>
-							<td>Joy Bubb, Medical/Welfare Officer
-							<br>Shirley Cook, Play Therapist
+							<td>Joy Bubb, <i class="text-maroon">Medical/Welfare Officer</i>
+							<br>Shirley Cook, <i class="text-maroon">Play Therapist</i>
 							</td>
 						</tr>
 						<tr class="spacer"><td >&nbsp;</td></tr>
@@ -98,8 +98,8 @@
 						<tr class="spacer"><td >&nbsp;</td></tr>
 						<tr>
 							<td class="staff_category">Midday Meals Supervisors</td>
-							<td>Lyanne Messenger, Senior MDMS
-							<br>Emma Rengger, Senior MDMS
+							<td>Lyanne Messenger, <i class="text-maroon">Senior MDMS</i>
+							<br>Emma Rengger, <i class="text-maroon">Senior MDMS</i>
 							<br>Shireen Aamir
 							<br>Caroline Bastin
 							<br>Jan Beard

@@ -7052,6 +7052,8 @@ td.staff_category {
     background-color: #eee;
     padding-top: 5px;
     padding-bottom:5px;
+    font-weight:bold;
+    color:#882e49;
     }
 .spacer td, .head td{border-left: none;}
 /*********************************************************************
