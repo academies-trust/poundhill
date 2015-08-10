@@ -2,7 +2,7 @@
 
 @section('hero')
 	<div class="hero col-md-12">
-		<img class="hero-image show" src='{{url()}}/img/Photos/Education_Primary_029.JPG?w=1920&h=500&fit=crop&crop=center'>
+		<img class="hero-image show" src='{{url()}}/img/headers/ph-27-03-14-047.JPG?w=1920&h=500&fit=crop&crop=center'>
 	</div>
 @endsection
 
@@ -44,7 +44,7 @@
 
 				<?php
 
-					require_once('c:\inetpub\wwwroot\brighton primary academies\holmbush\public\classes\AutoLinks.class.php');
+					require_once(public_path().'/classes/AutoLinks.class.php');
 					$newsletters = new AutoLinks('/docs/letters');
 					$newsletters->setAllowedExtensions("pdf"); // default "pdf","docx","doc","xlsx","xls"
 					$newsletters->setThumbnailPath("/docs/letters"); // thumbnail path if different from input path
