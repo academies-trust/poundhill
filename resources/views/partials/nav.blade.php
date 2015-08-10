@@ -52,8 +52,8 @@
 						<li><a href="{{ url('parents/termdates') }}">Term Dates</a></li>
 						<li><a href="{{ url('parents/uniform') }}">Uniform</a></li>
 						<li><a href="{{ url('parents/food-and-drink') }}">Food and Drink</a></li>
-						<li><a href="#">eSafety</a></li>
-						<li><a href="#">Letters to Parents</a></li>
+						<!--<li><a href="#">eSafety</a></li>-->
+						<li><a href="{{ url('parents/letters') }}">Letters to Parents</a></li>
 					</ul>
 				</div>
 				<div class="nav-mega-menu-sub col-md-6">
@@ -68,6 +68,7 @@
 			<div class="nav-mega-menu col-md-12" data-name="news">
 				<div class="nav-mega-menu-sub col-md-6">
 										<ul>
+						<li><a href="{{ url('news/news') }}">News</a></li>										
 						<li><a href="{{ url('news/events') }}">After School Events/Clubs</a></li>
 					</ul>
 				</div>
@@ -120,7 +121,7 @@
 						<li><a href="{{ url('further/admissions') }}">Admissions</a></li>
 						<li><a href="{{url()}}/docs/policies/Pupil Premium 2013-2014.pdf" target="_blank">Pupil Premium</a></li>
 						<li><a href="{{url()}}/docs/policies/Sports Grant Report 2014-2015.pdf" target="_blank">Sports Premium</a></li>
-						<li><a href="{{url()}}/docs/policies/ENE Policy 2014.pdf" target="_blank">SEND Offer</a></li>
+						<li><a href="{{url()}}/docs/policies/SEN Policy 2014.pdf" target="_blank">SEND Offer</a></li>
 					</ul>
 				</div>
 				<div class="nav-mega-menu-sub col-md-4">
